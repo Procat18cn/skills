@@ -1,6 +1,12 @@
 ---
 name: organize-tech-knowledge-doc
-description: Organize scattered technical or tutorial materials into structured knowledge documents. Use when the user asks to summarize, distill, or restructure technical content from files, web pages, PDFs, chat logs, or notes into a formatted document (default Markdown). Covers topics like troubleshooting guides, skill tutorials, system configuration, or software usage.
+description: >-
+  Organize scattered technical materials into structured knowledge documents.
+  Use when the user asks to summarize, distill, restructure, or organize
+  technical content from files, web pages, PDFs, chat logs, or notes into a
+  formatted document (default Markdown). Covers troubleshooting guides, skill
+  tutorials, system configuration docs, and software usage references.
+license: MIT
 ---
 
 # Organize Technical Knowledge Document
@@ -28,7 +34,7 @@ If requirements are underspecified, ask clarifying questions before proceeding.
 
 ### Phase 2: Extract & Analyze Source Content
 
-1. Read all source materials (use Read, WebFetch, PDF skills, etc.)
+1. Read all source materials (files, web pages, PDFs, etc.)
 2. Identify the core problem, root causes, solutions, and preventive measures
 3. Flag content that is contradictory, unclear, or requires external verification
 4. Note any basic concepts mentioned but not explained in the source
@@ -45,7 +51,7 @@ Search the web or reference official docs to supplement:
 
 Use the default technical knowledge structure below unless the user specifies otherwise.
 
-For a detailed template with per-section guidance, see [reference.md](reference.md).
+For a detailed template with per-section guidance, see [references/template.md](references/template.md).
 
 #### Default Structure
 
@@ -80,10 +86,10 @@ Before finalizing, verify:
 
 1. Generate the document in the requested format
 2. Save to the specified directory with an auto-generated descriptive filename
-3. Present the file to the user with a file:// link
+3. Present the output to the user
 
 ## Output Format Notes
 
-- **Markdown (default)**: Single `.md` file, standard Markdown with code blocks for commands/configs
-- **DOCX**: Use the `docx` skill for generation
-- **PDF**: Use the `pdf` skill for generation
+- **Markdown (default)**: Single `.md` file, standard Markdown with fenced code blocks for commands/configs.
+- **DOCX**: Use available document generation tools to create a Word document with proper headings and styles.
+- **PDF**: Use available document generation tools to create a printable PDF from the Markdown source.
